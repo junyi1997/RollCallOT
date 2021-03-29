@@ -21,7 +21,7 @@ def fd():
 
 root=tk.Tk()
 root.title("人臉辨識系統")
-root.geometry("630x370+0+0")
+root.geometry("620x370+0+0")
 #fontStyle = tkFont.Font(family="Lucida Grande", size=20)
 
 btn0=tk.Label(root,text="點名系統", height=5,bg='yellow').pack(side='top', fill='x')
