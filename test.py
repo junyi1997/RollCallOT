@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 import tkinter as tk
-import tkinter.font as tkFont
+#import tkinter.font as tkFont
 import tkinter.messagebox
 import face_reco_from_camera_ot_single_person
 import features_extraction_to_csv
