@@ -7,7 +7,7 @@ import tkinter.messagebox
 
 def New_person():
     #get_faces_from_camera.main()
-    pass:
+    pass
 
 def update()
     print("開始更新")
