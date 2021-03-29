@@ -2,23 +2,23 @@
 import tkinter as tk
 #import tkinter.font as tkFont
 import tkinter.messagebox
-import face_reco_from_camera_ot_single_person
-import features_extraction_to_csv
-import get_faces_from_camera    
+#import face_reco_from_camera_ot_single_person
+#import features_extraction_to_csv
+#import get_faces_from_camera    
 
 def New_person():
-    get_faces_from_camera.main()
-    #pass
+    #get_faces_from_camera.main()
+    pass
 
 def update():
     print("開始更新")
-    features_extraction_to_csv.main()
-    #pass
+    #features_extraction_to_csv.main()
+    pass
     print("更新成功")
 
 def fd():
-    face_reco_from_camera_ot_single_person.main()
-    #pass
+    #face_reco_from_camera_ot_single_person.main()
+    pass
 
 root=tk.Tk()
 root.title("人臉辨識系統")
