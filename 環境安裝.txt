@@ -1,0 +1,21 @@
+## 環境安裝
+$ python -m pip install --upgrade pip
+$ pip install -r requirements.txt
+
+
+Register faces：
+
+python get_face_from_camera.py
+
+提取所有錄入人臉數據存儲入"features_all.csv"：
+
+python features_extraction_to_csv.py
+
+利用OT算法，調用攝像頭進行實時人臉識別：
+
+python face_reco_from_camera_ot_single_person.py
+python face_reco_from_camera_ot_multi_people.py
+
+
+activate RollCallTo 
+python test.py
