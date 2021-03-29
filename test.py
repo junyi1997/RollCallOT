@@ -25,10 +25,10 @@ root.title("人臉辨識系統")
 root.geometry("620x370+0+0")
 fontStyle = tkFont.Font(family="Lucida Grande", size=20)
 
-btn0=tk.Label(root,text="人臉辨識系統", fontStyle, height=5,bg='yellow').pack(side='top', fill='x')
-btn1=tk.Button(root,text="新增照片", fontStyle, width=30,bg='light green',command=lambda:New_person()).pack(side='left', fill='y')
-btn2=tk.Button(root,text="更新", fontStyle, width=30,bg='deep sky blue',command=lambda:update()).pack(side='left', fill='y')
-btn3=tk.Button(root,text="人臉辨識", fontStyle, width=30,bg='hot pink',command=lambda:fd()).pack(side='left', fill='y')
+btn0=tk.Label(root,text="點名系統", height=5,bg='yellow',font=fontStyle).pack(side='top', fill='x')
+btn1=tk.Button(root,text="新增照片", width=30,bg='light green',font=fontStyle,command=lambda:New_person()).pack(side='left', fill='y')
+btn2=tk.Button(root,text="更新", width=30,bg='deep sky blue', font=fontStyle,command=lambda:update()).pack(side='left', fill='y')
+btn3=tk.Button(root,text="人臉辨識", width=30,bg='hot pink',font=fontStyle,command=lambda:fd()).pack(side='left', fill='y')
 
 
 root.mainloop()
