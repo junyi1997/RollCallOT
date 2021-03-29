@@ -9,7 +9,7 @@ def New_person():
     #get_faces_from_camera.main()
     pass
 
-def update()
+def update():
     print("開始更新")
     #features_extraction_to_csv.main()
     pass
