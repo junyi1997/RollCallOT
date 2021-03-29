@@ -18,8 +18,8 @@ def fd():
 
 root=tk.Tk()
 root.title("人臉辨識系統")
-root.geometry("720x600+0+0")
-fontStyle = tkFont.Font(size=20)
+root.geometry("720x600+200+200")
+fontStyle = tkFont.Font(family="Lucida Grande", size=20)
 
 btn0=tk.Label(root,text="點名系統", height=5,bg='yellow',font=fontStyle).pack(side='top', fill='x')
 btn1=tk.Button(root,text="新增照片", width=20,bg='light green',font=fontStyle,command=lambda:New_person()).pack(side='left', fill='y')
