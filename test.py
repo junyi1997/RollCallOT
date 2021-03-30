@@ -22,9 +22,15 @@ def fd():
 
 root=tk.Tk()
 root.title("人臉辨識系統")
-root.geometry("475x300+0+0")
-#fontStyle = tkFont.Font(family="Lucida Grande", size=20)   ,font=fontStyle
 
+
+#fontStyle = tkFont.Font(family="Lucida Grande", size=20)   ,font=fontStyle
+width=475
+height=300
+screenwidth = root.winfo_screenwidth()  
+screenheight = root.winfo_screenheight()  
+size = '%dx%d+%d+%d' % (width, height, (screenwidth - width)/2, (screenheight - height)/2) 
+root.geometry(size))
 btn0=tk.Label(root,text="點名系統", height=3,bg='yellow',font= ('Noto Sans Mono CJK TC Regular',20)).pack(side='top', fill='x')
 btn1=tk.Button(root,text="新增照片", width=10,bg='light green',font= ('Noto Sans Mono CJK TC Regular',20),command=lambda:New_person()).pack(side='left', fill='y')
 btn2=tk.Button(root,text="更新", width=10,bg='deep sky blue',font= ('Noto Sans Mono CJK TC Regular',20),command=lambda:update()).pack(side='left', fill='y')
