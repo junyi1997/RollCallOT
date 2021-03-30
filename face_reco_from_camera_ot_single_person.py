@@ -179,7 +179,7 @@ class Face_Recognizer:
                 self.frame_cnt += 1
                 #print(">>> Frame " + str(self.frame_cnt) + " starts")
                 flag, img_rd = stream.read()
-                kk = cv2.waitKey(1)
+                #kk = cv2.waitKey(1)
 
                 # 2. 检测人脸 / Detect faces for frame X
                 faces = detector(img_rd, 0)
@@ -337,8 +337,8 @@ class Face_Recognizer:
                 # 5. 生成的窗口添加说明文字 / Add note on cv2 window
                 self.draw_note(img_rd)
                 
-                if kk == ord('q'):
-                    break
+                #if kk == ord('q'):
+                    #break
     
 
                 self.update_fps()
