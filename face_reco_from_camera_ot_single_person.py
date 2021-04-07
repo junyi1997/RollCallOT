@@ -344,11 +344,11 @@ class Face_Recognizer:
                     break
     
 
-                self.update_fps()
+                #self.update_fps()
                 w=(screenwidth-100)/2
                 h=(screenheight-100)/2
                 cv2.namedWindow("camera", 1)
-                cv2.moveWindow('camera', w,h)
+                cv2.moveWindow('camera',w,h)
                 cv2.imshow("camera", img_rd)
                 
 
