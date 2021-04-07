@@ -208,8 +208,8 @@ class Face_Register:
 
     def run(self):
         cap = cv2.VideoCapture(0)
-        cap.set(3, 250) # set video widht
-        cap.set(4, 250) # set video height
+        cap.set(3, 220) # set video widht
+        cap.set(4, 220) # set video height
         # cap = cv2.VideoCapture("head-pose-face-detection-female-and-male.mp4")
         self.process(cap)
         cap.release()
