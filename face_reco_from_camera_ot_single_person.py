@@ -72,6 +72,9 @@ class Face_Recognizer:
         self.reclassify_interval_cnt = 0
         self.reclassify_interval = 10
         self.cap=cv2.VideoCapture(0)
+        
+        self.cap.set(3, 300) # set video widht
+        self.cap.set(4, 300) # set video height
         self.close_flag=True
         #紀錄人臉框框座標
         self.img_top=0
