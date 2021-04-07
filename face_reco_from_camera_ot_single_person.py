@@ -338,7 +338,7 @@ class Face_Recognizer:
                         self.current_frame_face_feature_list = []
 
                 # 5. 生成的窗口添加说明文字 / Add note on cv2 window
-                self.draw_note(img_rd)
+                #self.draw_note(img_rd)
                 
                 if kk == ord('q'):
                     break
