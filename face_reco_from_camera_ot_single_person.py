@@ -359,9 +359,14 @@ class Face_Recognizer:
         self.cap.release()
         cv2.destroyAllWindows()
 
-def main():
+def main(sw,sh):
+    global screenwidth,screenheight
+    screenwidth=sw
+    screenheight=sh
+    print(sw,sh)
     Face_Recognizer_con = Face_Recognizer()
     Face_Recognizer_con.run()
+    
 
 if __name__ == '__main__':
     

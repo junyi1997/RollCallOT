@@ -17,7 +17,7 @@ def update():
     print("更新成功")
 
 def fd():
-    face_reco_from_camera_ot_single_person.main()
+    face_reco_from_camera_ot_single_person.main(screenwidth,screenheight)
     #pass
 
 root=tk.Tk()
