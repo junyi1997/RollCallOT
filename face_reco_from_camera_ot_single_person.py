@@ -345,8 +345,10 @@ class Face_Recognizer:
     
 
                 self.update_fps()
-
+                w=(screenwidth-100)/2
+                h=(screenheight-100)/2
                 cv2.namedWindow("camera", 1)
+                cv2.moveWindow('camera', w,h)
                 cv2.imshow("camera", img_rd)
                 
 
@@ -363,7 +365,7 @@ def main(sw,sh):
     global screenwidth,screenheight
     screenwidth=sw
     screenheight=sh
-    print(sw,sh)
+    print(screenwidth,screenheight)
     Face_Recognizer_con = Face_Recognizer()
     Face_Recognizer_con.run()
     
