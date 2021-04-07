@@ -134,12 +134,12 @@ class Face_Recognizer:
         return dist
 
     # 生成的 cv2 window 上面添加说明文字 / putText on cv2 window
-    def draw_note(self, img_rd):
+    '''def draw_note(self, img_rd):
         # 添加说明 (Add some statements
         #cv2.putText(img_rd, "Face Recognizer with OT (one person)", (20, 40), self.font, 1, (255, 255, 255), 1, cv2.LINE_AA)
         cv2.putText(img_rd, "FPS:   " + str(self.fps.__round__(2)), (20, 100), self.font, 0.8, (0, 255, 0), 1,
                     cv2.LINE_AA)
-        cv2.putText(img_rd, "Q: Quit", (20, 450), self.font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
+        cv2.putText(img_rd, "Q: Quit", (20, 450), self.font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)'''
 
     def draw_name(self, img_rd):
         # 在人脸框下面写人脸名字 / Write names under ROI
