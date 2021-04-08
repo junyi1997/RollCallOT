@@ -7,7 +7,7 @@ import features_extraction_to_csv
 import get_faces_from_camera    
 
 def New_person():
-    get_faces_from_camera.main()
+    get_faces_from_camera.main(screenwidth,screenheight)
     #pass
 
 def update():

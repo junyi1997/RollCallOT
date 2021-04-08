@@ -200,7 +200,11 @@ class Face_Register:
             # 11. Update FPS
             self.update_fps()
 
+            h1,w1,l = np.shape(img_rd)
+            w=int((screenwidth-w1)/2)
+            h=int((screenheight-h1)/2)
             cv2.namedWindow("camera", 1)
+            cv2.moveWindow('camera',w,h)
             cv2.imshow("camera", img_rd)
 
 
@@ -216,7 +220,11 @@ class Face_Register:
         cv2.destroyAllWindows()
 
 
-def main():
+def main(sw,sh):
+    global screenwidth,screenheight
+    screenwidth=sw
+    screenheight=sh
+    print(screenwidth,screenheight)
     Face_Register_con = Face_Register()
     Face_Register_con.run()
 
