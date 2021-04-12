@@ -79,7 +79,7 @@ class Face_Register:
         self.frame_start_time = now
 
     # 生成的 cv2 window 上面添加说明文字 / PutText on cv2 window
-    def draw_note(self, img_rd):
+    '''def draw_note(self, img_rd):
         # 添加说明 / Add some notes
         cv2.putText(img_rd, "Face Register", (20, 40), self.font, 1, (255, 255, 255), 1, cv2.LINE_AA)
         cv2.putText(img_rd, "FPS:   " + str(self.fps.__round__(2)), (20, 100), self.font, 0.8, (0, 255, 0), 1,
@@ -87,7 +87,7 @@ class Face_Register:
         cv2.putText(img_rd, "Faces: " + str(self.current_frame_faces_cnt), (20, 140), self.font, 0.8, (0, 255, 0), 1, cv2.LINE_AA)
         cv2.putText(img_rd, "N: Create face folder", (20, 350), self.font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
         cv2.putText(img_rd, "S: Save current face", (20, 400), self.font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
-        cv2.putText(img_rd, "Q: Quit", (20, 450), self.font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
+        cv2.putText(img_rd, "Q: Quit", (20, 450), self.font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)'''
     def writeclassnumber(self):
         bbb=[]
         ccc=''
@@ -191,7 +191,7 @@ class Face_Register:
             self.current_frame_faces_cnt = len(faces)
 
             # 9. 生成的窗口添加说明文字 / Add note on cv2 window
-            self.draw_note(img_rd)
+            #self.draw_note(img_rd)
 
             # 10. 按下 'q' 键退出 / Press 'q' to exit
             if kk == ord('q'):
@@ -212,8 +212,8 @@ class Face_Register:
 
     def run(self):
         cap = cv2.VideoCapture(0)
-        cap.set(3, 250) # set video widht
-        cap.set(4, 250) # set video height
+        cap.set(3, 500) # set video widht
+        cap.set(4, 500) # set video height
         # cap = cv2.VideoCapture("head-pose-face-detection-female-and-male.mp4")
         self.process(cap)
         cap.release()
