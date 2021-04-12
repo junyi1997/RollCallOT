@@ -81,7 +81,7 @@ class Face_Recognizer:
         self.img_bottom=0
         self.img_right=0
         self.img_left=0
-        self.color=(255,255,255)
+        self.color=(0,255,0)
         self.bbb=[]
         f = open('Class_Number.txt','r')
         k = f.readlines()
