@@ -29,7 +29,7 @@ predictor = dlib.shape_predictor('data/data_dlib/shape_predictor_68_face_landmar
 
 # Dlib Resnet 人脸识别模型，提取 128D 的特征矢量 / Use Dlib resnet50 model to get 128D face descriptor
 face_reco_model = dlib.face_recognition_model_v1("data/data_dlib/dlib_face_recognition_resnet_model_v1.dat")
-imSize=230
+# imSize=230
 
 class Face_Recognizer:
     def __init__(self):
@@ -73,8 +73,8 @@ class Face_Recognizer:
         self.reclassify_interval = 10
         self.cap=cv2.VideoCapture(0)
         
-        self.cap.set(3, imSize) # set video widht
-        self.cap.set(4, imSize) # set video height
+        self.cap.set(3, 640) # set video widht
+        self.cap.set(4, 480) # set video height
         self.close_flag=True
         #紀錄人臉框框座標
         self.img_top=0
