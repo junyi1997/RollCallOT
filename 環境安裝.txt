@@ -2,6 +2,9 @@
 $ python -m pip install --upgrade pip
 $ pip install -r requirements.txt
 
+or
+
+conda env create -f RollCallTO.yaml
 
 Register faces：
 

@@ -1,0 +1,4 @@
+name: RollCallTO
+channels:
+  - defaults
+prefix: C:\Users\user1\.conda\envs\RollCallTO
