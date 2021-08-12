@@ -125,7 +125,6 @@ class Face_Recognizer:
         self.frame_time = now - self.frame_start_time
         self.fps = 1.0 / self.frame_time
         self.frame_start_time = now
-        print("fps = {:}".format(self.fps))
 
     # 计算两个128D向量间的欧式距离 / Compute the e-distance between two 128D features
     @staticmethod
@@ -136,12 +135,12 @@ class Face_Recognizer:
         return dist
 
     # 生成的 cv2 window 上面添加说明文字 / putText on cv2 window
-    '''def draw_note(self, img_rd):
+    def draw_note(self, img_rd):
         # 添加说明 (Add some statements
         #cv2.putText(img_rd, "Face Recognizer with OT (one person)", (20, 40), self.font, 1, (255, 255, 255), 1, cv2.LINE_AA)
         cv2.putText(img_rd, "FPS:   " + str(self.fps.__round__(2)), (20, 100), self.font, 0.8, (0, 255, 0), 1,
                     cv2.LINE_AA)
-        cv2.putText(img_rd, "Q: Quit", (20, 450), self.font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)'''
+        # cv2.putText(img_rd, "Q: Quit", (20, 450), self.font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
 
     def draw_name(self, img_rd):
         # 在人脸框下面写人脸名字 / Write names under ROI
@@ -348,13 +347,13 @@ class Face_Recognizer:
                         self.current_frame_face_feature_list = []
 
                 # 5. 生成的窗口添加说明文字 / Add note on cv2 window
-                #self.draw_note(img_rd)
+                self.draw_note(img_rd)
                 
                 if kk == ord('q'):
                     break
     
 
-                #self.update_fps()
+                self.update_fps()
                 h1,w1,l = np.shape(img_rd)
                 w=int((screenwidth-w1)/2)
                 h=int((screenheight-h1)/2)
