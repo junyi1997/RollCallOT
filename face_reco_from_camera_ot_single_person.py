@@ -7,7 +7,7 @@
 # Mail:     coneypo@foxmail.com
 
 # 利用 OT 对于单张人脸追踪, 实时人脸识别 (Real-time face detection and recognition via Object-tracking for single face)
-
+import test_f
 import dlib
 import numpy as np
 import cv2
@@ -83,6 +83,7 @@ class Face_Recognizer:
         self.img_left=0
         self.color=(0,255,0)
         self.bbb=[]
+        self.current_frame_face_feature_list_bef = []
         f = open('Class_Number.txt','r')
         k = f.readlines()
         f.close()
@@ -124,6 +125,7 @@ class Face_Recognizer:
         self.frame_time = now - self.frame_start_time
         self.fps = 1.0 / self.frame_time
         self.frame_start_time = now
+        print("fps = {:}".format(self.fps))
 
     # 计算两个128D向量间的欧式距离 / Compute the e-distance between two 128D features
     @staticmethod
@@ -282,7 +284,8 @@ class Face_Recognizer:
                     self.current_frame_face_position_list = []
                     self.current_frame_face_X_e_distance_list = []
                     self.current_frame_face_feature_list = []
-
+                    self.current_frame_face_feature_list_bef = []
+                    
                     # 4.2.1 人脸数从 0->1 / Face cnt 0->1
                     if self.current_frame_face_cnt == 1:
                         #print("   >>> scene 2.1 出现人脸，进行人脸识别 / Get person in this frame and do face recognition")
@@ -309,12 +312,19 @@ class Face_Recognizer:
                                     e_distance_tmp = self.return_euclidean_distance(
                                         self.current_frame_face_feature_list[k],
                                         self.features_known_list[i])
-                                    #print(e_distance_tmp)
+                                    # print(e_distance_tmp)
+                                    #################################################################################################################################
+                                    # if self.current_frame_face_feature_list_bef != self.current_frame_face_feature_list:
+                                    #     self.current_frame_face_feature_list_bef = self.current_frame_face_feature_list
+                                    #     print(self.current_frame_face_feature_list)
+                                    # aaaaaaa = test_f.main(self.current_frame_face_feature_list)
+                                    # print(aaaaaaa)
+                                    #################################################################################################################################
                                     self.current_frame_face_X_e_distance_list.append(e_distance_tmp)
                                 else:
                                     # 空数据 person_X / Empty data for person_X
                                     self.current_frame_face_X_e_distance_list.append(999999999)
-
+                                
                             # d. 寻找出最小的欧式距离匹配 / Find the one with minimum e distance
                             similar_person_num = self.current_frame_face_X_e_distance_list.index(min(self.current_frame_face_X_e_distance_list))
 
@@ -373,5 +383,5 @@ def main(sw,sh):
 
 if __name__ == '__main__':
     
-    main()
+    main(1920,1080)
     
