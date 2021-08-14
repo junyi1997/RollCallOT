@@ -7,7 +7,10 @@
 # Mail:     coneypo@foxmail.com
 
 # 利用 OT 对于单张人脸追踪, 实时人脸识别 (Real-time face detection and recognition via Object-tracking for single face)
-import test_f
+# import test_f
+
+
+
 import dlib
 import numpy as np
 import cv2
